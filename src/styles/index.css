@@ -1,0 +1,9 @@
+@font-face {
+  font-family: "Montsera";
+  src: url("../assets/fonts/Montserrat-Medium.ttf");
+}
+body {
+  font-family: "Montsera", sans-serif;
+}
+
+/*# sourceMappingURL=index.css.map */
