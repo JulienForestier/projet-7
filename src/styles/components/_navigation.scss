@@ -1,0 +1,12 @@
+nav{
+  width: 60%;
+  ul {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
+    list-style: none;
+    font-size: 24px;
+    font-weight: 500;
+  }
+}

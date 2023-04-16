@@ -2,7 +2,35 @@
   font-family: "Montsera";
   src: url("../assets/fonts/Montserrat-Medium.ttf");
 }
+$color1: #FF6060;
+$color2: #F6F6F6;
+$color3:white;
+$size1: 36px;
+$size2: 24px;
+$size3: 18px;
+$size4: 14px;
+$size5: 12px;
+
+*{
+  margin: 0;
+  padding: 0;
+}
 
 body{
   font-family: "Montsera", sans-serif;
+  font-size: 1.3rem;
+  line-height: 34px;
+  color: $color1;
+  min-width: 400px;
+  max-width: 2500px;
+  width: 90%;
+  height: 100vh;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+
+a{
+  text-decoration: none;
+  color: $color1;
 }

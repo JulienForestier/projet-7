@@ -3,16 +3,19 @@ import { NavLink } from "react-router-dom";
 
 const Navigation = () => {
   return (
-    <div className="navigation">
+    <nav>
       <ul>
-        <NavLink to="/">
-          <li>Acceuil</li>
+        <NavLink to="/" className={(nav) => (nav.isActive ? "nav-active" : "")}>
+          <li style={{ marginRight: "40px" }}>Acceuil</li>
         </NavLink>
-        <NavLink to="/about">
-          <li>A propos</li>
+        <NavLink
+          to="/about"
+          className={(nav) => (nav.isActive ? "nav-active" : "")}
+        >
+          <li>A Propos</li>
         </NavLink>
       </ul>
-    </div>
+    </nav>
   );
 };
 
