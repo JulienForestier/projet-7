@@ -12,13 +12,13 @@ const Logement = () => {
   const { id } = useParams();
   const logement = logements.find((location) => location.id === id);
   return (
-    <div>
+    <div className="layout">
       <Header />
       <Carousel length={logement.pictures.length} images={logement.pictures} />
       <Description logement={logement} />
       <div className="container">
         <div style={{ width: "50%" }}>
-          <Menu title="Description" content={logement.description} size="18" />
+          <Menu title="Description" content={logement.description} size={18} />
         </div>
         <div
           style={{ width: "50%", display: "flex", justifyContent: "flex-end" }}

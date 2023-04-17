@@ -4,7 +4,7 @@
   z-index: 10;
   position: relative;
   margin: 20px 0;
-  width: 90%;
+  width: 95%;
 
   .menu-header {
     z-index: 8;
@@ -29,10 +29,12 @@
     background: $color2;
     border-radius: 10px;
     text-align: left;
-    padding: 20px 15px;
+    padding: 30px 20px;
     margin-top: -15px;
-    p{
+    display: flex;
+    align-items: center;
 
+    p {
       font-weight: 400;
     }
   }

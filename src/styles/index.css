@@ -81,7 +81,7 @@ nav ul {
   z-index: 10;
   position: relative;
   margin: 20px 0;
-  width: 90%;
+  width: 95%;
 }
 .menu .menu-header {
   z-index: 8;
@@ -104,8 +104,10 @@ nav ul {
   background: #F6F6F6;
   border-radius: 10px;
   text-align: left;
-  padding: 20px 15px;
+  padding: 30px 20px;
   margin-top: -15px;
+  display: flex;
+  align-items: center;
 }
 .menu .dropdown-menu p {
   font-weight: 400;
@@ -113,7 +115,7 @@ nav ul {
 
 .carousel {
   width: 100%;
-  height: 425px;
+  height: 600px;
   position: relative;
   margin: 20px 0;
 }
@@ -142,10 +144,9 @@ nav ul {
 
 .description {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  height: 200px;
-  margin: 20px 0;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 50px;
 }
 .description .description-header {
   display: flex;
@@ -157,6 +158,7 @@ nav ul {
   font-size: 36px;
 }
 .description .description-header p {
+  margin-top: 5px;
   font-size: 18px;
 }
 .description .host {
@@ -175,14 +177,40 @@ nav ul {
   width: 100%;
 }
 .description .host div p {
+  width: 80px;
   line-height: 26px;
   text-align: right;
   margin: 0 5px;
+  font-size: 18px;
 }
 .description img {
   border-radius: 180px;
   object-fit: cover;
-  height: 40%;
+}
+
+.tags {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+.tags .tag {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: 20px;
+  padding: 2px 20px;
+  background: #FF6060;
+  margin-right: 15px;
+  border-radius: 10px;
+}
+.tags .tag p {
+  margin: 0;
+  text-align: center;
+  color: #F6F6F6;
+  font-size: 14px;
 }
 
 .footer {

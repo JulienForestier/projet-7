@@ -1,0 +1,25 @@
+.tags{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  .tag{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: 20px;
+    padding: 2px 20px;
+    background: $color1;
+    margin-right: 15px;
+    border-radius: 10px;
+    p{
+      margin: 0;
+      text-align: center;
+      color: $color2;
+      font-size: $size4 ;
+
+    }
+  }
+}

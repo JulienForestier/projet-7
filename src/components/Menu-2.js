@@ -21,7 +21,11 @@ const Menu2 = ({ title, content }) => {
         <div className="dropdown-menu ">
           <ul style={{ fontSize: "18px", listStyle: "none" }}>
             {content.map((i) => {
-              return <li key={[i]}>{i}</li>;
+              return (
+                <li key={[i]} style={{ fontSize: "18px" }}>
+                  {i}
+                </li>
+              );
             })}
           </ul>
         </div>
