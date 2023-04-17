@@ -1,8 +1,21 @@
 .description {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  margin-top: 50px;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 100%;
+  margin-top: 10px;
+  @media (max-width: 768px){
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .tag-rate-container{
+    display: flex;
+    justify-content: end;
+    width: 100%;
+    height: 30px;
+    margin-top: 10px;
+  }
   .description-header {
     display: flex;
     flex-direction: column;
@@ -22,16 +35,21 @@
   .host {
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
-    align-items: flex-end;
+    align-items: end;
     height: 100%;
     width: 40%;
+    .rate{
+      margin-top: 20px;
+    }
     div{
       display: flex;
-      align-items: flex-start;
       justify-content: flex-end;
-      height: 100%;
+      align-items: center;
+    }
+    @media (max-width: 768px){
       width: 100%;
+      justify-content: flex-start;
+    }
       p{
         width: 80px;
         line-height: 26px;
@@ -39,7 +57,7 @@
         margin: 0 5px;
         font-size: $size3;
       }
-    }
+
   }
 
   img {

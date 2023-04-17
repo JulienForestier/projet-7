@@ -8,9 +8,9 @@
 
   .card {
     width: 40vh;
-    min-width: 350px;
+    min-width: 300px;
     height: 40vh;
-    min-height: 350px;
+    min-height: 250px;
     border-radius: 10px;
     margin: 20px 20px;
     position: relative;
@@ -25,7 +25,7 @@
     p {
       display: block;
       color: $color3;
-      width: 80%;
+      width: 70%;
       font-size: 18px;
       position: absolute;
       left: 15px;

@@ -6,7 +6,10 @@ nav{
     align-items: center;
     height: 100%;
     list-style: none;
-    font-size: 24px;
+    font-size: $size2;
     font-weight: 500;
+    @media (max-width: 768px){
+      font-size: $size4;
+    }
   }
 }

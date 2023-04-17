@@ -17,6 +17,10 @@
     color: $color3;
     font-weight: 500;
     padding: 15px;
+    @media (max-width: 768px){
+      font-size: 13px;
+      height: 10px;
+    }
 
     button {
       color: $color3;
@@ -36,6 +40,9 @@
 
     p {
       font-weight: 400;
+      @media (max-width: 768px){
+        font-size: $size5;
+      }
     }
   }
 
