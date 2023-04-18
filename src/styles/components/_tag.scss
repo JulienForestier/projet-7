@@ -1,26 +1,36 @@
-.tags{
+.tags {
   width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
+  flex-wrap: wrap;
   align-items: center;
   margin-top: 20px;
-  .tag{
+
+  .tag {
     display: flex;
     justify-content: center;
     align-items: center;
     width: auto;
     height: 20px;
     padding: 2px 20px;
+    margin-top: 5px;
     background: $color1;
     margin-right: 15px;
     border-radius: 10px;
-    p{
+
+    p {
       margin: 0;
       text-align: center;
       color: $color2;
-      font-size: $size4 ;
+      font-size: $size4;
+      @media (max-width: 768px) {
+        font-size: 10px;
+      }
 
     }
+  }
+  @media (max-width: 768px){
+    margin-top: 0;
   }
 }

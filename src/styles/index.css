@@ -60,6 +60,26 @@ nav ul {
     font-size: 14px;
   }
 }
+nav .nav-active {
+  position: relative;
+}
+nav .nav-active::after {
+  content: "";
+  height: 2px;
+  width: 0;
+  border-radius: 10px;
+  background: #FF6060;
+  position: absolute;
+  bottom: 6px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: anim 0.6s ease forwards;
+}
+@keyframes anim {
+  to {
+    width: 100%;
+  }
+}
 
 .banner {
   width: 100%;
@@ -116,6 +136,7 @@ nav ul {
   background: #FF6060;
   border-radius: 10px;
   color: white;
+  font-size: 18px;
   font-weight: 500;
   padding: 15px;
 }
@@ -138,6 +159,12 @@ nav ul {
   margin-top: -15px;
   display: flex;
   align-items: center;
+  font-size: 18px;
+}
+@media (max-width: 768px) {
+  .menu .dropdown-menu {
+    font-size: 12px;
+  }
 }
 .menu .dropdown-menu p {
   font-weight: 400;
@@ -184,6 +211,7 @@ nav ul {
 
 .description {
   display: flex;
+  flex-wrap: nowrap;
   justify-content: space-between;
   align-items: flex-end;
   width: 100%;
@@ -193,17 +221,19 @@ nav ul {
   .description {
     flex-direction: column;
     align-items: flex-start;
+    margin-top: 0;
   }
 }
 .description .tag-rate-container {
   display: flex;
-  justify-content: end;
   width: 100%;
   height: 30px;
   margin-top: 10px;
 }
 .description .description-header {
   display: flex;
+  width: 100%;
+  flex-wrap: nowrap;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
@@ -211,19 +241,35 @@ nav ul {
 .description .description-header h2 {
   font-size: 36px;
 }
+@media (max-width: 768px) {
+  .description .description-header h2 {
+    font-size: 18px;
+  }
+}
 .description .description-header p {
   margin-top: 5px;
   font-size: 18px;
 }
+@media (max-width: 768px) {
+  .description .description-header p {
+    font-size: 14px;
+    margin-top: 0;
+  }
+}
 .description .host {
   display: flex;
   flex-direction: column;
-  align-items: end;
+  align-items: flex-end;
   height: 100%;
   width: 40%;
 }
 .description .host .rate {
   margin-top: 20px;
+}
+@media (max-width: 768px) {
+  .description .host .rate {
+    margin-top: 0;
+  }
 }
 .description .host div {
   display: flex;
@@ -231,9 +277,17 @@ nav ul {
   align-items: center;
 }
 @media (max-width: 768px) {
+  .description .host div img {
+    height: 20px;
+  }
+}
+@media (max-width: 768px) {
   .description .host {
     width: 100%;
-    justify-content: flex-start;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
   }
 }
 .description .host p {
@@ -242,6 +296,11 @@ nav ul {
   text-align: right;
   margin: 0 5px;
   font-size: 18px;
+}
+@media (max-width: 768px) {
+  .description .host p {
+    font-size: 12px;
+  }
 }
 .description img {
   border-radius: 180px;
@@ -253,6 +312,7 @@ nav ul {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
+  flex-wrap: wrap;
   align-items: center;
   margin-top: 20px;
 }
@@ -263,6 +323,7 @@ nav ul {
   width: auto;
   height: 20px;
   padding: 2px 20px;
+  margin-top: 5px;
   background: #FF6060;
   margin-right: 15px;
   border-radius: 10px;
@@ -272,6 +333,16 @@ nav ul {
   text-align: center;
   color: #F6F6F6;
   font-size: 14px;
+}
+@media (max-width: 768px) {
+  .tags .tag p {
+    font-size: 10px;
+  }
+}
+@media (max-width: 768px) {
+  .tags {
+    margin-top: 0;
+  }
 }
 
 .footer {
@@ -340,6 +411,30 @@ nav ul {
   width: 100%;
   justify-content: space-between;
 }
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+}
+.container .container-menu {
+  width: 50%;
+}
+@media (max-width: 768px) {
+  .container .container-menu {
+    width: 100%;
+  }
+}
+.container .equipment {
+  display: flex;
+  justify-content: flex-end;
+}
+@media (max-width: 768px) {
+  .container .equipment {
+    display: block;
+  }
+}
 
 .layout {
   height: 100vh;
@@ -358,19 +453,36 @@ nav ul {
   justify-content: space-evenly;
   flex-direction: column;
   align-items: center;
-  height: 100vh;
+  height: 80vh;
 }
 .error h2 {
   font-size: 280px;
   font-weight: 700;
-  margin: 30px 0;
+}
+@media (max-width: 768px) {
+  .error h2 {
+    font-size: 96px;
+  }
 }
 .error p {
   font-size: 36px;
+  text-align: center;
+  margin-top: 40px;
+}
+@media (max-width: 768px) {
+  .error p {
+    font-size: 18px;
+    width: 100%;
+    margin-top: 0;
+  }
 }
 .error .back-home {
   font-size: 18px;
-  margin-top: 100px;
+}
+@media (max-width: 768px) {
+  .error .back-home {
+    font-size: 14px;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */

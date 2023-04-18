@@ -5,7 +5,7 @@ const Menu2 = ({ title, content }) => {
   return (
     <div className="menu">
       <div className="menu-header">
-        <p style={{ fontSize: "18px" }}>{title}</p>
+        <p>{title}</p>
         <button onClick={() => setOpen(!open)}>
           {!open && <img src="/images/button.svg" alt="fléche" />}
           {open && (
@@ -19,13 +19,9 @@ const Menu2 = ({ title, content }) => {
       </div>
       {open && (
         <div className="dropdown-menu ">
-          <ul style={{ fontSize: "18px", listStyle: "none" }}>
+          <ul style={{ listStyle: "none" }}>
             {content.map((i) => {
-              return (
-                <li key={[i]} style={{ fontSize: "18px" }}>
-                  {i}
-                </li>
-              );
+              return <li key={[i]}>{i}</li>;
             })}
           </ul>
         </div>

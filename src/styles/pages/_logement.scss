@@ -2,5 +2,23 @@
   display: flex;
   width: 100%;
   justify-content: space-between;
+  @media (max-width: 768px){
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .container-menu{
+    width: 50%;
+    @media (max-width: 768px){
+      width: 100%;
+    }
+  }
+  .equipment{
+    display: flex;
+    justify-content: flex-end;
+    @media (max-width: 768px){
+      display: block;
+    }
+  }
 
 }

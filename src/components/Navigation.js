@@ -5,8 +5,12 @@ const Navigation = () => {
   return (
     <nav>
       <ul>
-        <NavLink to="/" className={(nav) => (nav.isActive ? "nav-active" : "")}>
-          <li style={{ marginRight: "40px" }}>Acceuil</li>
+        <NavLink
+          to="/"
+          className={(nav) => (nav.isActive ? "nav-active" : "")}
+          style={{ marginRight: "40px" }}
+        >
+          <li>Acceuil</li>
         </NavLink>
         <NavLink
           to="/about"

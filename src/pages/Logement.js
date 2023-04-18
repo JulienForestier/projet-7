@@ -1,5 +1,5 @@
-import React from "react";
-import { useParams } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { useNavigate, useParams } from "react-router-dom";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Carousel from "../components/Carousel";
@@ -10,23 +10,36 @@ import Menu from "../components/Menu";
 
 const Logement = () => {
   const { id } = useParams();
-  const logement = logements.find((location) => location.id === id);
+  const navigate = useNavigate();
+  const [logement, setLogement] = useState(null);
+  useEffect(() => {
+    const logement_ = logements.find((location) => location.id === id);
+    if (!logement_) {
+      navigate("/logementintrouvable");
+    } else setLogement(logement_);
+  }, [id, navigate]);
+
   return (
     <div className="layout">
-      <Header />
-      <Carousel length={logement.pictures.length} images={logement.pictures} />
-      <Description logement={logement} />
-      <div className="container">
-        <div style={{ width: "50%" }}>
-          <Menu title="Description" content={logement.description} size={18} />
+      {logement && (
+        <div>
+          <Header />
+          <Carousel
+            length={logement.pictures.length}
+            images={logement.pictures}
+          />
+          <Description logement={logement} />
+          <div className="container">
+            <div className="container-menu">
+              <Menu title="Description" content={logement.description} />
+            </div>
+            <div className="container-menu equipment">
+              <Menu2 title="Équipements" content={logement.equipments} />
+            </div>
+          </div>
+          <Footer />
         </div>
-        <div
-          style={{ width: "50%", display: "flex", justifyContent: "flex-end" }}
-        >
-          <Menu2 title="Équipements" content={logement.equipments} />
-        </div>
-      </div>
-      <Footer />
+      )}
     </div>
   );
 };
