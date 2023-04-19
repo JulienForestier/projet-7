@@ -28,7 +28,7 @@ const Carousel = ({ length, images }) => {
       )}
       {length <= 1 && (
         <div className="carousel">
-          <img src={images[index]} alt="photo du logement" />
+          <img src={images[index]} alt="différentes piéces du logement" />
         </div>
       )}
     </div>

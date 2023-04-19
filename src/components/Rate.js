@@ -18,9 +18,15 @@ const Rate = ({ rate }) => {
             src="/images/star2.svg"
             style={{ margin: "0 5px" }}
             key={index}
+            alt="étoile pleine"
           />
         ) : (
-          <img src="/images/Star.svg" style={{ margin: "0 5px" }} key={index} />
+          <img
+            src="/images/Star.svg"
+            style={{ margin: "0 5px" }}
+            key={index}
+            alt="étoile vide"
+          />
         );
       })}
     </div>
