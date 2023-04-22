@@ -23,7 +23,7 @@ const Carousel = ({ length, images }) => {
           <button onClick={handleNext}>
             <img src="/images/carousel-button.svg" alt="fléche directrice" />
           </button>
-          <img src={images[index]} alt="" />
+          <img src={images[index]} alt="différentes piéces du logement" />
         </div>
       )}
       {length <= 1 && (

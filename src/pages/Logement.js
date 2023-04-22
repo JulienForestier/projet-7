@@ -20,9 +20,9 @@ const Logement = () => {
   }, [id, navigate]);
 
   return (
-    <div className="layout">
+    <div>
       {logement && (
-        <div>
+        <div className="layout">
           <Header />
           <Carousel
             length={logement.pictures.length}
