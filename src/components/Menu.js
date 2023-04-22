@@ -5,7 +5,7 @@ const Menu = ({ title, content }) => {
   return (
     <div className="menu">
       <div className="menu-header ">
-        <p className="menusize1 menusize2">{title}</p>
+        <p>{title}</p>
         <button onClick={() => setOpen(!open)}>
           {!open && <img src="/images/button.svg" alt="fléche" />}
           {open && (
@@ -19,7 +19,7 @@ const Menu = ({ title, content }) => {
       </div>
       {open && (
         <div className="dropdown-menu ">
-          <p className="size1 size2">{content}</p>
+          <p>{content}</p>
         </div>
       )}
     </div>

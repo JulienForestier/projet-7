@@ -11,13 +11,15 @@
     width: 50%;
     @media (max-width: 768px){
       width: 100%;
+      display: flex;
+      justify-content: center;
     }
   }
   .equipment{
     display: flex;
     justify-content: flex-end;
     @media (max-width: 768px){
-      display: block;
+     justify-content: center;
     }
   }
 

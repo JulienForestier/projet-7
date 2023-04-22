@@ -426,6 +426,8 @@ nav .nav-active::after {
 @media (max-width: 768px) {
   .container .container-menu {
     width: 100%;
+    display: flex;
+    justify-content: center;
   }
 }
 .container .equipment {
@@ -434,7 +436,7 @@ nav .nav-active::after {
 }
 @media (max-width: 768px) {
   .container .equipment {
-    display: block;
+    justify-content: center;
   }
 }
 
