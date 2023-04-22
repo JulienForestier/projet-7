@@ -26,12 +26,14 @@ a {
 
 .header {
   height: 150px;
+  min-height: 150px;
   display: flex;
   justify-content: space-between;
 }
 @media (max-width: 768px) {
   .header {
     height: 80px;
+    min-height: 80px;
   }
 }
 .header img {
